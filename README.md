@@ -28,7 +28,7 @@ const AllowChannel = [ // you can send invite code in these channel - ②
 client.on('message', async message => {
   if(!AllowUser.includes(message.author)){ //①
     if(!AllowChannel.includes(message.channel)){     //②
-        if(message.includes(Regex.invites)){ 
+        if(invites.includes(message.content)){ 
         let msg = await message.channel.send("[Do not send invite link this channel]");
         //msg.delete({timeout:5000}) // delete ↑this message after 5 sec
         return message.delete({timeout:500});//delete invite message 0.5 sec
