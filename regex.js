@@ -7,4 +7,14 @@ module.exports = class Regex {
 		if (bot) str = str.replace(botInvRegex, text);
 		return str;
 	}
+	
+	static invites (str) {
+	if inviteRegex.includes(str);{
+		return true;
+	}
+	if botInvRegex.includes(str);{
+		return true;
+	}
+	return false;
+	}
 }
