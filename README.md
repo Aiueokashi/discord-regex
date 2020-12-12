@@ -1,17 +1,18 @@
 # discord-regex
-Discord bot and invite URL regex
+### Discord bot and invite URL regex
 ```javascript
 const inviteRegex = /(https?:\/\/)?(www\.|canary\.|ptb\.)?discord(\.gg|(app)?\.com\/invite|\.me)\/([^ ]+)\/?/gi;
 const botInvRegex = /(https?:\/\/)?(www\.|canary\.|ptb\.)?discord(app)?\.com\/(api\/)?oauth2\/authorize\?([^ ]+)\/?/gi;
 ```
-1.Download regex.js file and put on your "/root" directory<br>
-Usage for client message:
+### 1.Download regex.js file and put on your "/root" directory<br>
+### 2.Put your codes...
+#### Usage for client message:
 ```javascript
 const Regex = require(./regex.js);
 message.channel.send(Regex.stripInvites("some text includes invite code e.g. https://discord.gg/000000"));
 //-> some text includes invite code e.g. ******
 ```
-Usage delete invite message from user or bot:
+#### Usage delete invite message from user or bot:
 ```javascript
 const { invites } = require(./regex.js);
 const AllowUser = [  // they can send invite code anywhere - ①
