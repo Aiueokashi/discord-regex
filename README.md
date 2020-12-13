@@ -20,7 +20,7 @@ const AllowUser = [  // they can send invite code anywhere - ①
 "userID"
 ]
 
-const AllowChannel = [ // you can send invite code in these channel - ②
+const AllowChannel = [ // everyone can send invite code in these channel - ②
 "channelID",
 "channelID"
 ]
